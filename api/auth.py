@@ -3,13 +3,13 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import RedirectResponse, JSONResponse
 import httpx
 import jwt
-from config import GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_REDIRECT_URI, JWT_SECRET, ALGORITHM
+from config import GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_REDIRECT_URI, GITHUB_API_BASE_URL, JWT_SECRET, ALGORITHM
 
 router = APIRouter(tags=["Auth"])
 
 GITHUB_AUTHORIZE_URL = "https://github.com/login/oauth/authorize"
 GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token"
-GITHUB_USER_URL = "https://api.github.com/user"
+GITHUB_USER_URL = f"{GITHUB_API_BASE_URL}/user"
 
 
 @router.get("/login")
