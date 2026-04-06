@@ -4,6 +4,14 @@ A REST API cloud connector that integrates with the GitHub API using **OAuth 2.0
 
 ---
 
+## Demo Video
+
+A short video walkthrough demonstrating the complete API in action — OAuth login, fetching repos, creating issues, listing commits, and creating pull requests via Swagger UI.
+
+[Watch the Demo Video](https://drive.google.com/file/d/1T1KkxEUn1Rv5sAlP4veO9UyuuZVQCX4S/view?usp=sharing)
+
+---
+
 ## Table of Contents
 
 - [About the Project](#about-the-project)
