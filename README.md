@@ -142,7 +142,7 @@ You need to create a GitHub OAuth App to get the `Client ID` and `Client Secret`
 
 | Field | Value | Explanation |
 |---|---|---|
-| **Application name** | `GitHub Connector` | Any name you want — this is shown to users during authorization |
+| **Application name** | `Connector GitHub` | Any name you want — this is shown to users during authorization (GitHub doesn't allow app name starting with GitHub or Gist) |
 | **Homepage URL** | `http://localhost:8000` | The URL where your app runs locally |
 | **Application description** | `A cloud connector to interact with GitHub API` | Optional — describes what your app does |
 | **Authorization callback URL** | `http://localhost:8000/callback` | **Critical** — this must exactly match `GITHUB_REDIRECT_URI` in your `.env` file. This is where GitHub sends the user back after authorization. |
@@ -172,7 +172,12 @@ python -c "import secrets; print(secrets.token_hex(32))"
 python3 -c "import secrets; print(secrets.token_hex(32))"
 ```
 
-This will output a 64-character random hex string like:
+**Using OpenSSL (any platform):**
+```bash
+openssl rand -hex 32
+```
+
+Any of the above commands will output a 64-character random hex string like:
 ```
 8c6d5261fcb08570d907b6150d61e6e6bd3a313500bad9fddd28f841641fa684
 ```
