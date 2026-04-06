@@ -61,7 +61,6 @@ coverage.xml
 
 # Environments
 *.env
-.env.*
 
 # mypy
 .mypy_cache/
